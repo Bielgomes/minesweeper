@@ -61,19 +61,15 @@ class Resources:
 
         cls.start_sound = pygame.mixer.Sound("src/sounds/start.mp3")
         cls.start_sound.set_volume(0.2)
-        cls.start_sound.fadeout(1000)
 
         cls.win_sound = pygame.mixer.Sound("src/sounds/win.mp3")
         cls.win_sound.set_volume(0.2)
-        cls.win_sound.fadeout(1000)
 
         cls.click_sound = pygame.mixer.Sound("src/sounds/click.wav")
         cls.click_sound.set_volume(0.2)
-        cls.click_sound.fadeout(1000)
 
         cls.lose_sound = pygame.mixer.Sound("src/sounds/lose.wav")
         cls.lose_sound.set_volume(0.5)
-        cls.lose_sound.fadeout(1000)
 
     @classmethod
     def change_game_mode(cls, game_mode: GameMode) -> None:

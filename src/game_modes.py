@@ -7,7 +7,7 @@ class GameMode(TypedDict):
     columns: int
     rows: int
     cell_size: int
-    bombs: int
+    mines: int
 
 
 GAME_MODES = {
@@ -18,7 +18,7 @@ GAME_MODES = {
             "columns": 10,
             "rows": 8,
             "cell_size": 40,
-            "bombs": 10,
+            "mines": 10,
             "background": "background-01.png",
         }
     ),
@@ -29,7 +29,7 @@ GAME_MODES = {
             "columns": 18,
             "rows": 16,
             "cell_size": 30,
-            "bombs": 40,
+            "mines": 40,
             "background": "background-02.png",
         }
     ),
@@ -40,7 +40,7 @@ GAME_MODES = {
             "columns": 26,
             "rows": 24,
             "cell_size": 26,
-            "bombs": 99,
+            "mines": 99,
             "background": "background-03.png",
         }
     ),

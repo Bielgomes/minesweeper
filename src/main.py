@@ -1,6 +1,6 @@
 import pygame
 
-from game_controller import GameController
+from core.game_controller import GameController
 
 
 def main():
