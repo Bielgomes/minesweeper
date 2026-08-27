@@ -23,7 +23,7 @@ class Board:
         self._padding_top = padding_top
 
         self._cells: list[Cell] = []
-        self._max_cell_index = (self._rows * self._columns) - 1
+        self._max_cells = (self._rows * self._columns) - 1
 
         self._are_mines_placed = False
         self._flags_on_the_field = 0
@@ -67,7 +67,7 @@ class Board:
         self.flags_on_the_field = 0
         self._are_mines_placed = False
 
-        self._max_cell_index = (self._rows * self._columns) - 1
+        self._max_cells = self._rows * self._columns
         self.populate()
 
     def populate(self) -> None:
@@ -109,7 +109,7 @@ class Board:
                         self.reveal_neighbor_cells(neighbor_index)
 
     def reveal_all_mines(self) -> None:
-        for index in range(self._max_cell_index + 1):
+        for index in range(self._max_cells):
             target = self.cells[index]
             if target.has_mine and not target.is_flagged:
                 target.is_revealed = True
@@ -139,7 +139,7 @@ class Board:
         safe_cells = self.__calculate_safe_cells(start_index)
 
         while mines_to_place > 0:
-            index = secrets.randbelow(self._max_cell_index + 1)
+            index = secrets.randbelow(self._max_cells)
             cell = self.cells[index]
             if cell.has_mine or cell.is_revealed or index in safe_cells:
                 continue
