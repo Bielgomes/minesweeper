@@ -7,7 +7,7 @@ def main():
     pygame.init()
     pygame.mixer.init()
 
-    game_controller = GameController(game_mode=0)
+    game_controller = GameController()
     game_controller.run()
 
     pygame.quit()

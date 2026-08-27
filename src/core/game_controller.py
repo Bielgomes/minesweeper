@@ -8,7 +8,7 @@ from resources import Resources
 
 
 class GameController:
-    def __init__(self, game_mode: int = 1) -> None:
+    def __init__(self, game_mode: int = 0) -> None:
         selected_game_mode = GAME_MODES.get(game_mode)
         if selected_game_mode is None:
             raise InvalidGameModeException()
