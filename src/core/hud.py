@@ -10,8 +10,8 @@ class HUD:
         self._elapsed_seconds = 0.0
         self._start_time: float | None = None
 
-        self._elapsed_seconds_text_width: int | None = None
-        self._face_width: int | None = None
+        self._elapsed_seconds_text_x: int | None = None
+        self._face_x: int | None = None
 
         self._mine_count = mine_count
 
@@ -19,8 +19,8 @@ class HUD:
         self._elapsed_seconds = 0.0
         self._start_time = None
 
-        self._elapsed_seconds_text_width = None
-        self._face_width = None
+        self._elapsed_seconds_text_x = None
+        self._face_x = None
 
         self._mine_count = mine_count
 
@@ -58,23 +58,23 @@ class HUD:
             else Resources.sunglasses_face
         )
 
-        if self._elapsed_seconds_text_width is None:
-            self._elapsed_seconds_text_width = (
+        if self._elapsed_seconds_text_x is None:
+            self._elapsed_seconds_text_x = (
                 screen.width - elapsed_seconds_text.width - 23
             )
-        if self._face_width is None:
-            self._face_width = screen.width / 2 - face.width / 2
+        if self._face_x is None:
+            self._face_x = screen.width / 2 - face.width / 2
 
         screen.blits(
             (
                 (
                     elapsed_seconds_text,
-                    (self._elapsed_seconds_text_width, 17),
+                    (self._elapsed_seconds_text_x, 17),
                 ),
                 (flags_text, (27, 17)),
                 (
                     face,
-                    (self._face_width, 25),
+                    (self._face_x, 25),
                 ),
             )
         )
