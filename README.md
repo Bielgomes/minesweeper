@@ -48,3 +48,9 @@ Recreation of the classic Windows XP Minesweeper in Pygame-CE
     <br />
     <img src="./images/gamemode-hard.png" alt="Hard Gamemode" />
 </p>
+
+## Contributors
+
+<a href="https://github.com/Bielgomes/minesweeper/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Bielgomes/minesweeper" />
+</a>
