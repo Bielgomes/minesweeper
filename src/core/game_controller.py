@@ -123,6 +123,7 @@ class GameController:
 
                 self._board.reveal_all_mines()
                 Resources.lose_sound.play()
+                return
 
             if not self._board.are_mines_placed:
                 Resources.start_sound.play()
@@ -131,8 +132,7 @@ class GameController:
                 self._hud.start_timer()
 
             self._board.reveal_neighbor_cells(target_index)
-            if not target_cell.has_mine:
-                Resources.click_sound.play()
+            Resources.click_sound.play()
 
             if self._board.are_all_safe_cells_revealed:
                 Resources.win_sound.play()
