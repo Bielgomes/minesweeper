@@ -189,6 +189,8 @@ class GameController:
         self.__update_screen()
 
         Resources.instanciate_resources(game_mode=self.game_mode)
+        pygame.display.set_icon(Resources.mine_sprite)
+
         self._background = Resources.background
         self._board.populate()
 
