@@ -21,3 +21,30 @@ Recreation of the classic Windows XP Minesweeper in Pygame-CE
     <br />
     <img src="./images/demo-lose.gif" alt="Lose demo" />
 </p>
+
+## Controls
+
+* **Left Click:** Reveal tile
+* **Right Click:** Place/remove flag
+* **Emoji Click:** Reset game or change difficulty
+* **`R` Key:** Reset board
+
+## Game Modes
+
+<p align="center">
+    <strong style="font-size: 18px;">Easy - 10 Mines</strong>
+    <br />
+    <img src="./images/gamemode-easy.png" alt="Easy Gamemode" />
+</p>
+
+<p align="center">
+    <strong style="font-size: 18px;">Medium - 40 Mines</strong>
+    <br />
+    <img src="./images/gamemode-medium.png" alt="Medium Gamemode" />
+</p>
+
+<p align="center">
+    <strong style="font-size: 18px;">Hard - 99 Mines</strong>
+    <br />
+    <img src="./images/gamemode-hard.png" alt="Hard Gamemode" />
+</p>
